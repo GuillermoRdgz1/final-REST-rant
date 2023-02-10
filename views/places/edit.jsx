@@ -53,6 +53,12 @@ function edit_form (data) {
                     value={data.place.cuisine} 
                     required />
             </div>
+
+            <div className="form-group">
+                <label for="founded">Founded Year</label>
+                <input className="form-control" id="founded" name="founded" />
+              </div>
+
             <input className="btn btn-primary" type="submit" value="Update" />
             </form>
           </main>
