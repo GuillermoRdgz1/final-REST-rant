@@ -16,6 +16,7 @@ function new_form (data) {
         <Def>
           <main>
             <h1>Add a New Place</h1>
+            {message}
             <form method="POST"  action="/places">
                 <div className="form-group">
                     <label htmlFor="name">Place Name</label>
@@ -42,7 +43,7 @@ function new_form (data) {
             </div>
             <div className="form-group">
                 <label for="founded">Founded Year</label>
-                <input className="form-control" id="founded" name="founded" />
+                <input className="form-control" id="founded" name="founded" type="number" value={new Date().getFullYear()}/>
             </div>
             <input className="btn btn-primary" type="submit" value="Add Place" />
             </form>
