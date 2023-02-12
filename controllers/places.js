@@ -183,6 +183,7 @@ router.put('/:id', (req, res) => {
 })
 
 
+
 router.delete('/:id', (req, res) => {
   db.Place.findByIdAndDelete(req.params.id)
   .then(place => {
@@ -196,6 +197,7 @@ router.delete('/:id', (req, res) => {
 
 
 
+
 router.get('/:id/edit', (req, res) => {
   db.Place.findById(req.params.id)
   .then(place => {
@@ -205,6 +207,7 @@ router.get('/:id/edit', (req, res) => {
       res.render('error404')
   })
 })
+
 
 
 router.post('/:id/comment', (req, res) => {
